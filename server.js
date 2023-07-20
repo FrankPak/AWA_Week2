@@ -8,6 +8,19 @@ app.get("/hello", (req,res) => {
 
 });
 
+app.get("/echo/:id", (req,res) => {
+    res.json({id:req.params.id})
+
+});
+
+app.post("/sum", (req, res) => {
+    let sum = 0;
+    res.json({sum:req.body.numbers.reduce(myFunc)})
+})
+
+function myFunc(total, num) {
+    return total = total + num;
+}
 
 app.listen(port, () => console.log(`Server listening a port ${port}!`));
 

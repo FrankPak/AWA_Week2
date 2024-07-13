@@ -16,7 +16,7 @@ app.get("/echo/:id", (req,res) => {
 });
 
 app.post("/sum", (req, res) => {
-    res.json({sum:req.body.numbers.reduce(myFunc)})
+    res.json({sum:req.Body.numbers.reduce(myFunc)})
 })
 
 function myFunc(total, num) {
